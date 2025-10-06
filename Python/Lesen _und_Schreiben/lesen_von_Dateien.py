@@ -6,9 +6,9 @@
 #---------------------- Datei lesen.py
 try:
     datei = open("beispiel.txt", "r")
-    content = datei.read()
+    inhalt = datei.read()
     datei.close()
     print("Inhalt der Datei:")
-    print(content)
+    print(inhalt)
 except FileNotFoundError:
     print("Die Datei wurde nicht gefunden.")
