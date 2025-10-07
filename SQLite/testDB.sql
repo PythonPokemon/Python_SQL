@@ -21,3 +21,5 @@ VALUES  ('Hans', 'Schmidt', '1975-09-20');
 
 -- Abfrage aller Datensätze aus der Tabelle "personen"
 SELECT * FROM personen;
+
+DROP TABLE personen;
