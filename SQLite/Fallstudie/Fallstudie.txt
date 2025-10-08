@@ -1,0 +1,84 @@
+Fallstudie: Kleines Veranstaltungszentrum — Schritt für Schritt in SQLite
+
+Ziel: 
+Anfänger lernen Tabellen anlegen, Daten einfügen, Filtern / Ändern / Löschen, 
+Aggregatfunktionen, suchen / sortieren / gruppieren und am Ende tabellenübergreifende Abfragen.
+Bei jeder neuen Anweisung zeige ich ein kurzes Beispiel (Kommentar) 
+und danach eine klare Schritt-für-Schritt-Lösung. 
+Jede Übung enthält 2–3 Wiederholungsaufgaben zum Üben.
+
+Hinweis: Alle SQL-Beispiele sind SQLite-kompatibel. Keine Aliase, kein @.
+---------------------------------------------------------------------------------------------
+Szenario kurz
+Du betreibst ein kleines Veranstaltungszentrum. Wir verwalten:
+Veranstalter (wer Events organisiert)
+Mitarbeiter (Personal)
+Veranstaltung (Events)
+Teilnehmer (Gäste)
+Zuordnungen: welche Teilnehmer und welche Mitarbeiter zu einer Veranstaltung gehören
+---------------------------------------------------------------------------------------------
+Vorbereitung: Datenbank-Datei anlegen (einmalig)
+# kurz in Python (optional) — erstellt die Datei "fallstudie.db"
+import sqlite3
+connection = sqlite3.connect("fallstudie.db")
+connection.close()
+
+
+Kommentar: sqlite3.connect("fallstudie.db") erzeugt die Datei, falls nicht vorhanden.
+---------------------------------------------------------------------------------------------
+1) Tabellen erstellen (CREATE TABLE)
+Zweck: Struktur anlegen — so weiß die DB, welche Daten es gibt.
+
+Beispiel (Kommentar):
+
+-- CREATE TABLE: legt eine Tabelle mit Spalten an
+CREATE TABLE IF NOT EXISTS veranstalter (
+  veranstalter_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  kontakt TEXT
+);
+---------------------------------------------------------------------------------------------
+Schritt-für-Schritt (Lösung):
+
+Öffne deine Datenbank (z. B. fallstudie.db) in VS Code oder Python.
+Führe das CREATE TABLE Statement aus.
+CREATE TABLE IF NOT EXISTS verhindert Fehler, falls Tabelle schon existiert.
+Wiederhole für alle Tabellen:
+
+CREATE TABLE IF NOT EXISTS veranstalter (
+  veranstalter_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  kontakt TEXT
+);
+
+CREATE TABLE IF NOT EXISTS mitarbeiter (
+  mitarbeiter_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  vorname TEXT NOT NULL,
+  nachname TEXT NOT NULL,
+  rolle TEXT
+);
+
+CREATE TABLE IF NOT EXISTS veranstaltung (
+  veranstaltung_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  titel TEXT NOT NULL,
+  datum TEXT,               -- Format 'YYYY-MM-DD'
+  ort TEXT,
+  veranstalter_id INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS teilnehmer (
+  teilnehmer_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  vorname TEXT,
+  nachname TEXT
+);
+
+CREATE TABLE IF NOT EXISTS veranstaltung_teilnehmer (
+  veranstaltung_id INTEGER,
+  teilnehmer_id INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS veranstaltung_mitarbeiter (
+  veranstaltung_id INTEGER,
+  mitarbeiter_id INTEGER
+);
+---------------------------------------------------------------------------------------------

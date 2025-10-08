@@ -1,6 +1,6 @@
 import sqlite3
 
-# Verbindung (erstellt Datei "Dummy.db" im aktuellen Ordner, falls nicht vorhanden)
+# Verbindung (erstellt Datei "Dummy.db" im aktuellen Ordner, sogar dann, falls nicht vorhanden)
 connection = sqlite3.connect("Dummy.db")
 
 # Cursor zum Ausführen von SQL-Befehlen

@@ -8,7 +8,7 @@ db_pfad = os.path.join("SQLite", "neueDB.db")
 verbindung = sqlite3.connect(db_pfad)
 cursor = verbindung.cursor()
 
-# SQL-Anweisung zum Erstellen der Tabelle "Person" und befüllen von Datensätzen
+# SQL-Anweisung zum Erstellen von belibiegen Tabellen "xy" und befüllen von Datensätzen
 sql_anweisung = """
 CREATE Table Person (
 id int, 
