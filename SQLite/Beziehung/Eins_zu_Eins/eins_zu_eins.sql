@@ -18,8 +18,26 @@ CREATE TABLE personalausweis (
     ausweis_id INTEGER PRIMARY KEY AUTOINCREMENT,
     ausweisnummer TEXT UNIQUE NOT NULL,
     person_id INTEGER UNIQUE,                               -- UNIQUE macht die Beziehung 1:1
-    FOREIGN KEY (person_id) REFERENCES personen(person_id)
+    FOREIGN KEY (person_id) REFERENCES personen
 );
 
 DROP TABLE personen;
 DROP TABLE personalausweis;
+
+----------------------------------------------------------------------------------------------------------
+-- ❌ Problem:
+
+-- Beide Tabellen verweisen gegenseitig aufeinander.
+-- Wenn du das ausführst, bekommst du (je nach SQL-Dialekt) einen Fehler wie:
+
+-- “foreign key mismatch” oder “circular reference”.
+
+-- Denn:
+-- Beim Erstellen von personen existiert personalausweis noch nicht → Referenz nicht möglich.
+
+-- Beim Erstellen von personalausweis existiert personen zwar schon, 
+-- aber sie referenziert zurück → Zirkuläre Abhängigkeit entsteht.
+
+-- SQL erlaubt das nicht direkt, weil man sonst nicht weiß, 
+-- welche Tabelle zuerst angelegt oder gelöscht werden darf.
+----------------------------------------------------------------------------------------------------------
