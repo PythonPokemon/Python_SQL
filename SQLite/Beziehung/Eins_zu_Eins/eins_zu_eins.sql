@@ -9,15 +9,17 @@
 ----------------------------------------------------------------------------------------------------------
 
 CREATE TABLE personen (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER PRIMARY KEY AUTOINCREMENT,
     vorname TEXT NOT NULL,
     nachname TEXT NOT NULL
 );
 
 CREATE TABLE personalausweis (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ausweis_id INTEGER PRIMARY KEY AUTOINCREMENT,
     ausweisnummer TEXT UNIQUE NOT NULL,
-    person_id INTEGER UNIQUE,                       -- UNIQUE macht die Beziehung 1:1
-    FOREIGN KEY (person_id) REFERENCES personen(id)
+    person_id INTEGER UNIQUE,                               -- UNIQUE macht die Beziehung 1:1
+    FOREIGN KEY (person_id) REFERENCES personen(person_id)
 );
 
+DROP TABLE personen;
+DROP TABLE personalausweis;

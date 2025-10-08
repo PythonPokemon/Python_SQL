@@ -1,0 +1,22 @@
+Bei 1:1 Tabellen müssten doch auch beide Primärschlüssel besitzen ?
+
+
+Sehr gute und wichtige Frage — und ja, das denkt man oft zuerst 🙂
+Aber in einer 1:1-Beziehung braucht nur eine der beiden Tabellen einen Fremdschlüssel, nicht beide.
+Ich erkläre dir genau, warum — und wann man trotzdem zwei Schlüssel verwendet 👇
+
+
+🧭 Warum braucht man nicht zwei Schlüssel?
+👉 Weil die Richtung der Beziehung nur einmal gespeichert werden muss.
+Wenn du bei reisepass speicherst, welche Person dazugehört, dann weißt du automatisch: Diese Person hat diesen Reisepass.
+Eine zweite Referenz in personen wäre redundant und könnte zu Inkonsistenzen führen.
+
+⚙️ Ausnahmefall: Gegenseitige Referenzen
+Manchmal hat man anfangs noch keine Reihenfolge, z. B. bei Tabellen, die sich gegenseitig brauchen (z. B. „Ehepartner“).
+Dann kann man ausnahmsweise beide Richtungen einbauen — aber das ist unnötig komplex und wird nicht empfohlen.
+
+🧠 Merksatz
+Beziehung	Fremdschlüssel liegt bei	Besonderheit
+1:1	einer der beiden Tabellen	UNIQUE auf dem Fremdschlüssel
+1:n	auf der „n“-Seite	kein UNIQUE, da mehrere erlaubt
+m:n	in einer Zwischentabelle	zwei Fremdschlüssel, jeweils ohne UNIQUE
