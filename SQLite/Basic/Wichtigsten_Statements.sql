@@ -4,6 +4,7 @@
 -- strg + k + c  auskommentieren
 -- strg + k + u  einkommentieren
 
+-- spalten/attribut löschen geht nicht!
 --------------------------------------------------------------------------------------------------------------
 -- 1️⃣  TABELLE ERSTELLEN
 -- Erstellt eine neue Tabelle mit Spalten und Datentypen.
