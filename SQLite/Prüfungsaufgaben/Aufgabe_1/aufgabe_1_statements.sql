@@ -92,9 +92,13 @@ FOREIGN KEY (MLeistungNr) REFERENCES MedLeistung(MLeistungNr),
 FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)            -- wenn man Arzt draußen lässt, darf mehrfach behandelt werden
 );
 
+-- 3  DATENSÄTZE EINFÜGEN
+
+
 
 --------------------------------------------------------------------------------------------------------------
 -- CRUD Abfragen: C = CREAT | R = READ | U = UPDATE | D = DELETE
+
 -- BASIS
 DROP TABLE Patient;
 DROP TABLE ZusatzLeistung;

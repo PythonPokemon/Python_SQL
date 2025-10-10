@@ -6,6 +6,9 @@
 
 -- spalten/attribut löschen geht nicht!
 --------------------------------------------------------------------------------------------------------------
+-- 💙 DDL (Data Definition Language)
+-- Definition und Struktur: Tabellen anlegen, ändern, löschen
+
 -- 1️⃣  TABELLE ERSTELLEN
 -- Erstellt eine neue Tabelle mit Spalten und Datentypen.
 --------------------------------------------------------------------------------------------------------------
@@ -19,6 +22,9 @@ CREATE TABLE personen (
 
 
 --------------------------------------------------------------------------------------------------------------
+-- 💚 DML (Data Manipulation Language)
+-- Daten in Tabellen einfügen, ändern, löschen
+
 -- 2️⃣  DATENSÄTZE EINFÜGEN
 -- Fügt neue Zeilen in eine Tabelle ein.
 -- ACHTUNG Nummerische Werte == zahlen 0-9 werden nicht in Anführungszeichen gsetzt
@@ -36,6 +42,9 @@ INSERT INTO personen (vorname, nachname, geburtsdatum, einkommen)
 VALUES ('Lisa', 'Schmidt', '1988-03-11', 2800);
 
 --------------------------------------------------------------------------------------------------------------
+-- 💛 DQL (Data Query Language)
+-- Daten abfragen, anzeigen, filtern, sortieren
+
 -- 3️⃣  ALLE DATENSÄTZE ANZEIGEN
 -- Gibt alle Spalten und Zeilen der Tabelle aus.
 --------------------------------------------------------------------------------------------------------------
