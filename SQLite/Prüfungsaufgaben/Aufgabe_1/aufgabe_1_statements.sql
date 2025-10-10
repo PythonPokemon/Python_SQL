@@ -4,7 +4,8 @@
 -- strg + k + c  auskommentieren
 -- strg + k + u  einkommentieren
 
--- spalten/attribut löschen geht nicht!
+-- spalten/attribut == Datensätze löschen geht nicht!
+-- man muss dann die tabelle löschen und neu anlegen! 
 --------------------------------------------------------------------------------------------------------------
 -- Roter Leitfaden
 
@@ -89,12 +90,30 @@ ArztNr INTEGER,
 PRIMARY KEY (PatientNr, LeistungsDat, MLeistungNr, ArztNr),     -- Primärschlüssel Kombination
 FOREIGN KEY (PatientNr) REFERENCES Patient(PatientNr),
 FOREIGN KEY (MLeistungNr) REFERENCES MedLeistung(MLeistungNr),
-FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)            -- wenn man Arzt draußen lässt, darf mehrfach behandelt werden
+FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)                    -- wenn man Arzt draußen lässt, darf mehrfach behandelt werden
 );
 
 -- 3  DATENSÄTZE EINFÜGEN
 
+-- 🧩 Variante 1: Mehrere INSERT INTO … VALUES (…) hintereinander
+-- 👉 Funktioniert immer, in allen SQL-Systemen (sicherste Variante):
 
+INSERT INTO Patient (PatientName, PatientVorname, PatientStrNr, PatientPLZ, PatientOrt)
+VALUES ('Müller', 'Klaus', 'Südstr.24', '54321', 'Burg');   
+
+INSERT INTO Patient (PatientName, PatientVorname, PatientStrNr, PatientPLZ, PatientOrt)
+VALUES ('Meier', 'Sabine', 'Nordweg 7', '12345', 'Lingen');
+
+INSERT INTO Patient (PatientName, PatientVorname, PatientStrNr, PatientPLZ, PatientOrt)
+VALUES ('Schulz', 'Peter', 'Hauptstr. 15a', '98765', 'Greven');
+
+-- 🧩 Variante 2: In einem einzigen Statement (Mehrfach-INSERT)
+-- 👉 Funktioniert z. B. in MySQL, PostgreSQL oder SQLite ab Version 3.7.11
+INSERT INTO Patient (PatientName, PatientVorname, PatientStrNr, PatientPLZ, PatientOrt)
+VALUES 
+  ('Schulz', 'Britta', 'Nordstr. 9', '4569', 'Hagen'),
+  ('Rose', 'Bernd', 'Weststr. 5', '55691', 'Schnurz'),
+  ('Dummy', 'Test', 'Hauptstr. 15b', '79114', 'Freiburg');
 
 --------------------------------------------------------------------------------------------------------------
 -- CRUD Abfragen: C = CREAT | R = READ | U = UPDATE | D = DELETE
