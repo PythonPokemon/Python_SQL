@@ -4,9 +4,11 @@
 -- strg + k + c  auskommentieren
 -- strg + k + u  einkommentieren
 
+-- DCL: Data Control Language: GRANT; REVOKE; Views | Benutzerrechte & Zugriffskontrolle ⚠️ Nein in SQL-LIte
 -- spalten/attribut löschen geht nicht!
 --------------------------------------------------------------------------------------------------------------
--- 💙 DDL (Data Definition Language)
+-- 💙 DDL (Data Definition Language) 
+-- Schlüsselwörter: CREATE; SHOW; ALTER; DROP; CONSTRAINT
 -- Definition und Struktur: Tabellen anlegen, ändern, löschen
 
 -- 1️⃣  TABELLE ERSTELLEN
@@ -22,7 +24,8 @@ CREATE TABLE personen (
 
 
 --------------------------------------------------------------------------------------------------------------
--- 💚 DML (Data Manipulation Language)
+-- 💚 DML (Data Manipulation Language) 
+-- Schlüsselwörter: INSERT; SELECT; UPDATE; DELETE; JOIN; Aggregatfunktionen
 -- Daten in Tabellen einfügen, ändern, löschen
 
 -- 2️⃣  DATENSÄTZE EINFÜGEN
