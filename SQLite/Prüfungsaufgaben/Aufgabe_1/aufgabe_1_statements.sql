@@ -100,6 +100,7 @@ FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)                    -- wenn man Arzt
 -- 🧩 Variante 1: Mehrere INSERT INTO … VALUES (…) hintereinander
 -- 👉 Funktioniert immer, in allen SQL-Systemen (sicherste Variante):
 
+-- ACHTUNG PRIMARY KEY AUTOINCREMENT  --
 INSERT INTO Patient (PatientName, PatientVorname, PatientStrNr, PatientPLZ, PatientOrt)
 VALUES ('Müller', 'Klaus', 'Südstr.24', '54321', 'Burg');   
 
@@ -119,7 +120,7 @@ VALUES
 
 -- Tabelle ---------------------------------------------------------------------Arzt!
 
-
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
 INSERT INTO Arzt (ArztName, ArztFaktor)
 VALUES ('Sauer', 1.5);  
 
@@ -128,6 +129,32 @@ VALUES ('Helmig', 1.0);
 
 INSERT INTO Arzt (ArztName, ArztFaktor)
 VALUES ('Birkeler', 2.0);  
+
+-- Tabelle ---------------------------------------------------------------------MedLeistung!
+
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+INSERT INTO MedLeistung (Bezeichnung, Preis)
+values ('Untersuchung', 53.20);
+
+INSERT INTO MedLeistung (Bezeichnung, Preis)
+VALUES ('Injektion', 19.80);
+
+INSERT INTO MedLeistung (Bezeichnung, Preis)
+VALUES ('Verband', 17.79);
+
+INSERT INTO MedLeistung (Bezeichnung, Preis)
+VALUES ('Visite', 21.56);
+
+INSERT INTO MedLeistung (Bezeichnung, Preis)
+VALUES ('MRT', 800.00);
+
+-- Tabelle ---------------------------------------------------------------------ZusatzLeistung!
+
+
+-- Kreuztabelle ---------------------------------------------------------------------Pat_MedLeistung!
+
+-- Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
+
 
   -- Schritt 4 – Abfragen und Überprüfen
 
