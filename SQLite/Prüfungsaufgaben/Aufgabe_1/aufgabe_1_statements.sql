@@ -93,7 +93,7 @@ FOREIGN KEY (MLeistungNr) REFERENCES MedLeistung(MLeistungNr),
 FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)                    -- wenn man Arzt draußen lässt, darf mehrfach behandelt werden
 );
 
--- 3  DATENSÄTZE EINFÜGEN
+-- Schritt 3 – Daten einfügen
 
 -- 🧩 Variante 1: Mehrere INSERT INTO … VALUES (…) hintereinander
 -- 👉 Funktioniert immer, in allen SQL-Systemen (sicherste Variante):
@@ -114,6 +114,8 @@ VALUES
   ('Schulz', 'Britta', 'Nordstr. 9', '4569', 'Hagen'),
   ('Rose', 'Bernd', 'Weststr. 5', '55691', 'Schnurz'),
   ('Dummy', 'Test', 'Hauptstr. 15b', '79114', 'Freiburg');
+
+  -- Schritt 4 – Abfragen und Überprüfen
 
 --------------------------------------------------------------------------------------------------------------
 -- CRUD Abfragen: C = CREAT | R = READ | U = UPDATE | D = DELETE
