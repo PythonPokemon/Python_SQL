@@ -117,6 +117,18 @@ VALUES
   ('Rose', 'Bernd', 'Weststr. 5', '55691', 'Schnurz'),
   ('Dummy', 'Test', 'Hauptstr. 15b', '79114', 'Freiburg');
 
+-- Tabelle ---------------------------------------------------------------------Arzt!
+
+
+INSERT INTO Arzt (ArztName, ArztFaktor)
+VALUES ('Sauer', 1.5);  
+
+INSERT INTO Arzt (ArztName, ArztFaktor)
+VALUES ('Helmig', 1.0);  
+
+INSERT INTO Arzt (ArztName, ArztFaktor)
+VALUES ('Birkeler', 2.0);  
+
   -- Schritt 4 – Abfragen und Überprüfen
 
 --------------------------------------------------------------------------------------------------------------
