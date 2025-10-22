@@ -95,6 +95,8 @@ FOREIGN KEY (ArztNr) REFERENCES Arzt(ArztNr)                    -- wenn man Arzt
 
 -- Schritt 3 – Daten einfügen
 
+-- Tabelle ---------------------------------------------------------------------Patient!
+
 -- 🧩 Variante 1: Mehrere INSERT INTO … VALUES (…) hintereinander
 -- 👉 Funktioniert immer, in allen SQL-Systemen (sicherste Variante):
 
@@ -120,12 +122,12 @@ VALUES
 --------------------------------------------------------------------------------------------------------------
 -- CRUD Abfragen: C = CREAT | R = READ | U = UPDATE | D = DELETE
 
--- BASIS
+-- BASIS PK
 DROP TABLE Patient;
 DROP TABLE ZusatzLeistung;
 DROP TABLE MedLeistung;
 DROP TABLE Arzt;
 
--- ERWEITERUNG
+-- ERWEITERUNG mit FK
 DROP TABLE Pat_ZusatzLeistung;
 DROP TABLE Pat_MedLeistung;

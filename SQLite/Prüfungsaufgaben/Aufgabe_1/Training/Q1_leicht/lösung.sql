@@ -17,7 +17,7 @@ SELECT * FROM Patient ORDER BY PatientName ASC;
 
 
 -- 5. Zeige alle medizinischen Leistungen mit Preis über 300 €.
-SELECT * FROM MedLeistung WHERE Preis > 300;
+SELECT * FROM MedLeistung WHERE Preis > 100;
 
 
 -- 6. Zeige die Namen aller Ärzte mit ihrem Faktor (nur Name und Faktor).
