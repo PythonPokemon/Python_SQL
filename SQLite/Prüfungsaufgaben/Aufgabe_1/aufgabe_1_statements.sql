@@ -150,10 +150,28 @@ VALUES ('MRT', 800.00);
 
 -- Tabelle ---------------------------------------------------------------------ZusatzLeistung!
 
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+INSERT INTO ZusatzLeistung (Bezeichnung, Tagespreis)
+VALUES ('Einzelzimmer', 130);
 
--- Kreuztabelle ---------------------------------------------------------------------Pat_MedLeistung!
+INSERT INTO ZusatzLeistung (Bezeichnung, Tagespreis)
+VALUES ('Fernseher', 8.5);
 
--- Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
+INSERT INTO ZusatzLeistung (Bezeichnung, Tagespreis)
+VALUES ('WLAN', 2);
+
+INSERT INTO ZusatzLeistung (Bezeichnung, Tagespreis)
+VALUES ('Wahlessen',25);
+
+-- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_MedLeistung!
+
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+
+
+
+-- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
+
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
 
 
   -- Schritt 4 – Abfragen und Überprüfen
