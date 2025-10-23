@@ -39,7 +39,6 @@
 
 
 --------------------------------------------------------------------------------------------------------------
-SELECT PatientName FROM Patient;
 
 -- Schritt 1 – Basistabellen ohne Fremdschlüssel zuerst
 CREATE TABLE ZusatzLeistung (
@@ -165,48 +164,48 @@ VALUES ('Wahlessen',25);
 -- Achtung das Datum in dieser Tabelle führt zu einer Lösch- Anomalie == IHK !
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (1, '20.04.2020', 1, 1)   -- geht 
+VALUES (1, '20-04-2020', 1, 1)   -- geht 
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (1, '20.04.2020', 2, 2);
+VALUES (1, '20-04-2020', 2, 2);
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (2, '20.04.2020', 2, 3);
+VALUES (2, '20-04-2020', 2, 3);
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (1, '21.04.2020', 4, 2);
+VALUES (1, '21-04-2020', 4, 2);
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (3, '21.04.2020', 3, 3);
+VALUES (3, '21-04-2020', 3, 3);
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (2, '22.04.2020', 5, 1);
+VALUES (2, '22-04-2020', 5, 1);
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (2, '22.04.2020', 4, 1);
+VALUES (2, '22-04-2020', 4, 1);
 
 -- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (1, '20.04.2020', '24.04.2020', 1);
+VALUES (1, '20-04-2020', '24-04-2020', 1);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (1, '20.04.2020', '24.04.2020', 2);
+VALUES (1, '20-04-2020', '24-04-2020', 2);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (1, '20.04.2020', '24.04.2020', 3);
+VALUES (1, '20-04-2020', '24-04-2020', 3);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (2, '19.04.2020', '23.04.2020', 1);
+VALUES (2, '19-04-2020', '23-04-2020', 1);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (2, '19.04.2020', '23.04.2020', 2);
+VALUES (2, '19-04-2020', '23-04-2020', 2);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (2, '19.04.2020', '23.04.2020', 3);
+VALUES (2, '19-04-2020', '23-04-2020', 3);
 
 INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
-VALUES (3, '21.04.2020', '24.04.2020', 4);
+VALUES (3, '21-04-2020', '24-04-2020', 4);
 
   -- Schritt 4 – Abfragen und Überprüfen
 
@@ -229,11 +228,11 @@ DELETE FROM Pat_MedLeistung WHERE LeistungsDat = '21.04.2020';
 -- Präziser mit mehreren schlüssel:
 DELETE FROM Pat_MedLeistung
 WHERE PatientNr = 1
-  AND LeistungsDat = '20.04.2020'
+  AND LeistungsDat = '20-04-2020'
   AND MLeistungNr = 1
   AND ArztNr = 1;
 
 -- Empfehlung: Datum konsistent speichern
 -- besser: '2020-04-21' statt '21.04.2020'
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
-VALUES (1, '2020-04-20', 1, 1);
+VALUES (1, '2020-04-20', 1, 1); -- anstatt ''
