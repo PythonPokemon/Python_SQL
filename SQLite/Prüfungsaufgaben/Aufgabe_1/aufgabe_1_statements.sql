@@ -165,13 +165,29 @@ VALUES ('Wahlessen',25);
 
 -- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_MedLeistung!
 
---                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (1, '20.04.2020', 1, 1)   -- geht 
 
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (1, '20.04.2020', 2, 2);
 
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (2, '20.04.2020', 2, 3);
+
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (1, '21.04.2020', 4, 2);
+
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (3, '21.04.2020', 3, 3);
+
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (2, '22.04.2020', 5, 1);
+
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (2, '22.04.2020', 4, 1);
 
 -- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
 
---                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
 
 
   -- Schritt 4 – Abfragen und Überprüfen
@@ -188,3 +204,5 @@ DROP TABLE Arzt;
 -- ERWEITERUNG mit FK
 DROP TABLE Pat_ZusatzLeistung;
 DROP TABLE Pat_MedLeistung;
+
+DELETE FROM Pat_MedLeistung WHERE LeistungsDat = '21.04.2020';
