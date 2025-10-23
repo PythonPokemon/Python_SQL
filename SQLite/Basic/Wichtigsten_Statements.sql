@@ -123,6 +123,15 @@ DELETE FROM personen WHERE id = 2;    -- löscht nur Erika Musterfrau
 --------------------------------------------------------------------------------------------------------------
 DELETE FROM personen;
 
+-- Löschen von Datensätzen
+DELETE FROM Pat_MedLeistung WHERE LeistungsDat = '21.04.2020';
+
+-- Präziser mit mehreren schlüssel:
+DELETE FROM Pat_MedLeistung
+WHERE PatientNr = 1
+  AND LeistungsDat = '20.04.2020'
+  AND MLeistungNr = 1
+  AND ArztNr = 1;
 
 --------------------------------------------------------------------------------------------------------------
 -- 🔟  TABELLE LÖSCHEN
