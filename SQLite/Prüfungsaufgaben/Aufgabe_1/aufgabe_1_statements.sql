@@ -21,7 +21,7 @@
 
 -- Schritt 3 – Daten einfügen  
     -- Basistabellen: (Patient, Arzt, MedLeistung, ZusatzLeistung)
-    -- Beziehungstabellen: (Pat_MedLeistung, Pat_ZusatzLeistung)
+    -- Kreuztabellen: (Pat_MedLeistung, Pat_ZusatzLeistung)
 
 -- Schritt 4 – Abfragen und Überprüfen
 -- Alle Patienten:
@@ -164,6 +164,7 @@ INSERT INTO ZusatzLeistung (Bezeichnung, Tagespreis)
 VALUES ('Wahlessen',25);
 
 -- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_MedLeistung!
+-- Achtung das Datum in dieser Tabelle führt zu einer Lösch- Anomalie == IHK !
 
 INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
 VALUES (1, '20.04.2020', 1, 1)   -- geht 
@@ -188,7 +189,26 @@ VALUES (2, '22.04.2020', 4, 1);
 
 -- ACHTUNG--> Kreuztabelle ---------------------------------------------------------------------Pat_ZusatzLeistung!
 
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (1, '20.04.2020', '24.04.2020', 1);
 
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (1, '20.04.2020', '24.04.2020', 2);
+
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (1, '20.04.2020', '24.04.2020', 3);
+
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (2, '19.04.2020', '23.04.2020', 1);
+
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (2, '19.04.2020', '23.04.2020', 2);
+
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (2, '19.04.2020', '23.04.2020', 3);
+
+INSERT INTO  Pat_ZusatzLeistung (PatientNr, VonDatum, BisDatum, ZLeistungNr)
+VALUES (3, '21.04.2020', '24.04.2020', 4);
 
   -- Schritt 4 – Abfragen und Überprüfen
 
@@ -205,4 +225,17 @@ DROP TABLE Arzt;
 DROP TABLE Pat_ZusatzLeistung;
 DROP TABLE Pat_MedLeistung;
 
+-- Löschen von Datensätzen
 DELETE FROM Pat_MedLeistung WHERE LeistungsDat = '21.04.2020';
+
+-- Präziser mit mehreren schlüssel:
+DELETE FROM Pat_MedLeistung
+WHERE PatientNr = 1
+  AND LeistungsDat = '20.04.2020'
+  AND MLeistungNr = 1
+  AND ArztNr = 1;
+
+-- Empfehlung: Datum konsistent speichern
+-- besser: '2020-04-21' statt '21.04.2020'
+INSERT INTO Pat_MedLeistung (PatientNr, LeistungsDat, MLeistungNr, ArztNr)
+VALUES (1, '2020-04-20', 1, 1);

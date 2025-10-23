@@ -40,7 +40,7 @@ SELECT AVG(Preis) AS "Durchschnittspreis" FROM MedLeistung;
 SELECT PatientOrt, COUNT(*) AS "Anzahl Patienten"
 FROM Patient
 GROUP BY PatientOrt
-HAVING COUNT(*) > 1;
+HAVING COUNT(*) >= 1;
 
 
 -- 11. Zeige für jede medizinische Leistung die Bezeichnung und wie oft sie ausgeführt wurde (in der Tabelle Pat_MedLeistung).
