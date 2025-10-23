@@ -4,8 +4,6 @@
 -- strg + k + c  auskommentieren
 -- strg + k + u  einkommentieren
 
--- spalten/attribut == Datensätze löschen geht nicht!
--- man muss dann die tabelle löschen und neu anlegen! 
 --------------------------------------------------------------------------------------------------------------
 -- Roter Leitfaden
 

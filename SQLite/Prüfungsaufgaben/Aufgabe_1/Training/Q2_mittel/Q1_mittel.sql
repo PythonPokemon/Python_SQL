@@ -87,7 +87,6 @@ GROUP BY MedLeistung.Bezeichnung;
 
 
 -- 23. Zeige den Namen des Arztes, der die meisten Leistungen insgesamt durchgeführt hat.== geht nicht!
-
 SELECT
   Arzt.ArztName,
   COUNT(*) AS "Gesamtleistungen"
