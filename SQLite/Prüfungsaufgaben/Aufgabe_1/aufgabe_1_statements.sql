@@ -68,13 +68,13 @@ CREATE TABLE Arzt (
     ArztFaktor REAL
 );
 
--- Schritt 2 – Tabellen mit Fremdschlüsseln danach 
+-- Schritt 2 – Tabellen mit Fremdschlüsseln danach (man muss für jeden Fremdschlüssel eine Spalte anlegen)
 CREATE TABLE Pat_ZusatzLeistung (
     PatientNr INTEGER,
     VonDatum DATE,
     BisDatum DATE,
     ZLeistungNr INTEGER,
-    PRIMARY KEY (PatientNr, VonDatum, ZLeistungNr),
+    PRIMARY KEY (PatientNr, VonDatum, ZLeistungNr), -- 3er kombination Korrekt
     FOREIGN KEY (PatientNr) REFERENCES Patient(PatientNr),
     FOREIGN KEY (ZLeistungNr) REFERENCES ZusatzLeistung(ZLeistungNr)
 );
