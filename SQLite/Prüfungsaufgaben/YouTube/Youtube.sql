@@ -11,16 +11,21 @@
     -- Kunde
     -- Artikelgruppe
    
--- Schritt 2 – Tabellen mit Fremdschlüsseln danach 
+-- Schritt 2 – Tabellen mit Fremdschlüsseln  
     -- Bestellung
     -- Artikel
     -- Position
 
--- Schritt 3 – Daten einfügen  
-    -- Basistabellen: (Kunde, Artikelgruppe)
-    -- Kreuztabellen: (Bestellung, Artikel, Position)
+-- Schritt 3 – Daten einfügen Basistabellen:
+    -- Kunde
+    -- Artikelgruppe
 
--- Schritt 4 – Abfragen und Überprüfen
+-- Schritt 4 – Daten einfügen Kreuztabellen:
+    -- Bestellung
+    -- Artikel
+    -- Position
+
+-- Schritt 5 – Abfragen und Überprüfen
 -- Alle Kunden:
     -- SELECT * FROM Kunden;
 
@@ -46,12 +51,45 @@ Rabatt DECIMAL NOT NULL
 
 -- Schritt 2 – Tabellen mit Fremdschlüsseln danach (man muss für jeden Fremdschlüssel eine Spalte anlegen)
 CREATE TABLE Bestellung (
-Bestellnummer INTEGER,                                      -- PK
-Kundennummer INTEGER,                                       -- FK
+Bestellnummer INTEGER,                                                              -- PK
+Kundennummer INTEGER,                                                               -- FK
 Bestelldatum DATE,
-PRIMARY KEY (Bestellnummer, Kundennummer),                  -- 2er Kombination PK + FK
-FOREIGN KEY (Kundennummer) REFERENCES Kunde(Kundennummer)   -- Fremdschlüssel Referenz
+PRIMARY KEY (Bestellnummer, Kundennummer),                                          -- 2er Kombination PK + FK
+FOREIGN KEY (Kundennummer) REFERENCES Kunde (Kundennummer)                          -- Fremdschlüssel Referenz
 );
 
-CREATE TABLE Artikel ();
-CREATE TABLE Position ();
+CREATE TABLE Artikel (
+Artikelnummer INTEGER,                                                              -- PK
+Artikelgruppennummer INTEGER,                                                       -- FK
+Bezeichnung TEXT,
+Preis REAL,
+PRIMARY KEY (Artikelnummer, Artikelgruppennummer),                                  -- 2er Kombination PK + FK
+FOREIGN KEY (Artikelgruppennummer) REFERENCES Artikelgruppe(Artikelgruppennummer)   -- Fremdschlüssel Referenz
+);
+
+CREATE TABLE Position (
+Bestellnummer INTEGER,                                                              -- PK
+Artikelnummer INTEGER,                                                              -- FK
+Menge INTEGER,
+PRIMARY KEY (Bestellnummer, Artikelnummer),                                         -- 2er Kombination PK + FK
+FOREIGN KEY (Artikelnummer) REFERENCES Artikel (Artikelnummer)                      -- Fremdschlüssel Referenz
+);
+
+--------------------------------------------------------------------------------------------------------------
+
+-- Schritt 3 – Daten einfügen Basistabellen:
+    -- Kunde
+    -- Artikelgruppe
+
+--------------------------------------------------------------------------------------------------------------
+
+-- Schritt 4 – Daten einfügen Kreuztabellen:
+    -- Bestellung
+    -- Artikel
+    -- Position
+
+--------------------------------------------------------------------------------------------------------------
+
+-- Schritt 5 – Abfragen und Überprüfen
+-- Alle Kunden:
+    -- SELECT * FROM Kunden;
