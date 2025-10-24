@@ -15,8 +15,8 @@ CREATE TABLE personen (
 );
 
 CREATE TABLE adressen (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    person_id INTEGER NOT NULL,           -- Fremdschlüssel
+    id INTEGER PRIMARY KEY AUTOINCREMENT,   -- PK
+    person_id INTEGER NOT NULL,             -- Fremdschlüssel
     stadt TEXT,
     plz TEXT,
     FOREIGN KEY (person_id) REFERENCES personen(id)
