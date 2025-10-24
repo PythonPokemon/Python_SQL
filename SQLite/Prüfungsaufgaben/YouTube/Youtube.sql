@@ -81,6 +81,30 @@ FOREIGN KEY (Artikelnummer) REFERENCES Artikel (Artikelnummer)                  
     -- Kunde
     -- Artikelgruppe
 
+-- Tabelle ---------------------------------------------------------------------Kunde!
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+
+INSERT INTO Kunde (Nachname, Vorname, Straße, PLZ, Ort)
+VALUES ('Hubert', 'Klaus', 'Berlinerstr. 32', '49377', 'Vechta');
+
+INSERT INTO Kunde (Nachname, Vorname, Straße, PLZ, Ort)
+VALUES ('Meier', 'Hans', 'Goethestr. 32', '54434', 'Köln');
+
+INSERT INTO Kunde (Nachname, Vorname, Straße, PLZ, Ort)
+VALUES ('König', 'Jens', 'Eichenweg 43', '12433', 'Berlin');
+
+-- Tabelle ---------------------------------------------------------------------Artikelgruppe!
+--                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
+
+INSERT INTO  Artikelgruppe (Bezeichnung, Rabatt)
+VALUES ('Elektronik', 0.10);                                                        -- 0.10 == 10%
+
+INSERT INTO  Artikelgruppe (Bezeichnung, Rabatt)
+VALUES ('Peripherie', 0.10);                                                        -- 0.10 == 10%
+
+INSERT INTO  Artikelgruppe (Bezeichnung, Rabatt)
+VALUES ('Tiernahtung', 0.00);                                                       -- 0.10 == 10%
+
 --------------------------------------------------------------------------------------------------------------
 
 -- Schritt 4 – Daten einfügen Kreuztabellen:
