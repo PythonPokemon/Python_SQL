@@ -7,6 +7,10 @@
 --------------------------------------------------------------------------------------------------------------
 -- Roter Leitfaden
 
+-- Schritt 0 - Datenbank erstellen und benutzen
+    -- CREATE DATABASE Youtube.db
+    -- USE DATABASE Youtube.de
+
 -- Schritt 1 – Basistabellen ohne Fremdschlüssel zuerst erstellen!
     -- Kunde
     -- Artikelgruppe
@@ -62,7 +66,7 @@ CREATE TABLE Artikel (
 Artikelnummer INTEGER,                                                              -- PK
 Artikelgruppennummer INTEGER,                                                       -- FK
 Bezeichnung TEXT,
-Preis REAL,
+Preis DECIMAL,
 PRIMARY KEY (Artikelnummer, Artikelgruppennummer),                                  -- 2er Kombination PK + FK
 FOREIGN KEY (Artikelgruppennummer) REFERENCES Artikelgruppe(Artikelgruppennummer)   -- Fremdschlüssel Referenz
 );
