@@ -1,0 +1,19 @@
+Roter Faden!
+
+Vorbereitung:
+    - VSCode Extensions runterladen / installieren
+        - SQLite
+        - SQlite Viewer
+        - SQLite3 Editor
+        - ERD Editor
+        - Draw.io Integration
+        - Office Viewer
+
+Zuerst Youtube Video schauen zum thema Normalisierung: https://www.youtube.com/watch?v=wznoISlyMf0&t=404s
+    - Das Excel sheet Normalisieren aus dem Video in die dritte Normalform
+    - daraus ein ERD erstellen
+    - daraus ein RDBM erstellen
+    - daraus eine Datenbank erstellen
+        - Tabellen erstellen
+        - mit Datensätzen befüllen
+        - Tabellen Daten erfragen
