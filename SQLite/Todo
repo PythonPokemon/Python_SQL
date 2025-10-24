@@ -8,9 +8,10 @@ Vorbereitung:
         - ERD Editor
         - Draw.io Integration
         - Office Viewer
+        - VSCode-Icons
 
 Zuerst Youtube Video schauen zum thema Normalisierung: https://www.youtube.com/watch?v=wznoISlyMf0&t=404s
-    - Das Excel sheet Normalisieren aus dem Video in die dritte Normalform
+    - Das Excel sheet Normalisierung aus dem Video in die dritte Normalform bringen
     - daraus ein ERD erstellen
     - daraus ein RDBM erstellen
     - daraus eine Datenbank erstellen
