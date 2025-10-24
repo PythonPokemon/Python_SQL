@@ -137,7 +137,23 @@ INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
 VALUES (5, 'Hundefutter', 49, 3);
 
 -- Tabelle ---------------------------------------------------------------------Position!
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (23, 1, 1);
 
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (42, 2, 1);
+
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (42, 3, 2);
+
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (42, 1, 1);
+
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (78, 4, 1);
+
+INSERT INTO Position (Bestellnummer, Artikelnummer, Menge)
+VALUES (99, 5, 1);
 
 --------------------------------------------------------------------------------------------------------------
 
