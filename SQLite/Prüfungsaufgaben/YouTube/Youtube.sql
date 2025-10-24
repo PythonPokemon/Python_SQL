@@ -77,9 +77,7 @@ FOREIGN KEY (Artikelnummer) REFERENCES Artikel (Artikelnummer)                  
 
 --------------------------------------------------------------------------------------------------------------
 
--- Schritt 3 – Daten einfügen Basistabellen:
-    -- Kunde
-    -- Artikelgruppe
+-- Schritt 3 – Basistabellen Daten einfügen:
 
 -- Tabelle ---------------------------------------------------------------------Kunde!
 --                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
@@ -107,10 +105,27 @@ VALUES ('Tiernahtung', 0.00);                                                   
 
 --------------------------------------------------------------------------------------------------------------
 
--- Schritt 4 – Daten einfügen Kreuztabellen:
-    -- Bestellung
-    -- Artikel
-    -- Position
+-- Schritt 4 – Kreuztabellen Daten einfügen:
+
+-- Tabelle ---------------------------------------------------------------------Bestellung!
+INSERT INTO Bestellung (Bestellnummer, Kundennummer, Bestelldatum)
+VALUES (23, 1, '2019-09-06');
+
+INSERT INTO  Bestellung (Bestellnummer, Kundennummer, Bestelldatum)
+VALUES (42, 2, '2019-09-07');
+
+INSERT INTO  Bestellung (Bestellnummer, Kundennummer, Bestelldatum)
+VALUES (78, 1, '2019-09-08');
+
+INSERT INTO  Bestellung (Bestellnummer, Kundennummer, Bestelldatum)
+VALUES (99, 3, '2019-09-09');
+
+-- Tabelle ---------------------------------------------------------------------Artikel!
+
+
+
+-- Tabelle ---------------------------------------------------------------------Position!
+
 
 --------------------------------------------------------------------------------------------------------------
 
