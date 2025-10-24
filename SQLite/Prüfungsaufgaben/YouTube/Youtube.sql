@@ -121,8 +121,20 @@ INSERT INTO  Bestellung (Bestellnummer, Kundennummer, Bestelldatum)
 VALUES (99, 3, '2019-09-09');
 
 -- Tabelle ---------------------------------------------------------------------Artikel!
+INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
+VALUES (1, 'Fernseher', 799, 1);
 
+INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
+VALUES (2, 'Monitor', 199, 1);
 
+INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
+VALUES (3, 'Tastatur', 39, 2);
+
+INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
+VALUES (4, 'Maus', 19, 2);
+
+INSERT INTO Artikel (Artikelnummer, Bezeichnung, Preis, Artikelgruppennummer)
+VALUES (5, 'Hundefutter', 49, 3);
 
 -- Tabelle ---------------------------------------------------------------------Position!
 
