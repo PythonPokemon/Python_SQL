@@ -1,0 +1,14 @@
+Tag 3: 
+•	Funktionen, Rekursion, return, none
+•	Behandlung von Fehlern mit von Python definierten Ausnahmen 
+•	In Python eingebaute (built-in) Exceptions-Hierarchie 
+try-except
+•	Weitergabe von Exceptions 
+•	Erzeugen von Zufallswerten mit den Funktionen des Moduls random:
+Funktionen: random(), seed(), choice(), sample()
+•	Verstehen der maschinellen Darstellung von Zeichen: 
+Kodierungsstandards: ASCII, UNICODE, UTF-8, code points, Escape-Sequenzen
+•	Input/Output-Terminologie verstehen 
+•	Eingabe-/Ausgabeoperationen durchführen
+
+•	Prüfungsvorbereitung PCEP

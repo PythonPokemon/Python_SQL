@@ -1,0 +1,15 @@
+Python_Lernen/
+            |
+            _pycache_   # ist zwischenspeicher der funktionsergebnise von mathe_funktionswerkzeug.py
+            Tag 1
+            Tag 2
+            Tag 3
+            Tag 4/
+                │
+                ├── Q1_mathe_funktionswerkzeug.py
+                ├── Q4_main.py
+                ├── Verzeichnis_Dateistruktur.txt
+                └── Ziel.txt
+            Tag 5
+            ausgabe.txt
+            README.md

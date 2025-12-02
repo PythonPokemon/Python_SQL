@@ -1,0 +1,85 @@
+Prüfungsvorbereitung PCEP – Quizfragen (Tag 3)
+
+❓1. Was ist der Unterschied zwischen return und print() in einer Funktion?
+✅ Antwort:
+return gibt einen Wert an den Aufrufer zurück → damit kann weitergerechnet werden.
+print() zeigt einen Text nur auf dem Bildschirm an, aber gibt nichts zurück.
+
+❓2. Was passiert, wenn man durch 0 teilt?
+✅ Antwort:
+Es entsteht ein Fehler vom Typ ZeroDivisionError, weil eine Division durch 0 mathematisch nicht erlaubt ist.
+
+❓3. Wozu dient try/except?
+✅ Antwort:
+Mit try/except kann man Fehler (Exceptions) abfangen, damit das Programm nicht abstürzt, sondern z. B. eine Fehlermeldung ausgibt.
+
+❓4. Was macht random.choice()?
+✅ Antwort:
+random.choice() wählt zufällig ein Element aus einer Liste oder Sequenz aus.
+
+❓5. Was bedeutet ord("A")?
+✅ Antwort:
+ord("A") gibt den Zahlenwert (Codepoint) des Zeichens "A" zurück → das ist 65 im ASCII-Code.
+
+❓6. Was bedeutet None in Python?
+✅ Antwort:
+None ist ein spezieller Wert in Python und steht für "nichts", "kein Wert".
+Er wird z. B. zurückgegeben, wenn eine Funktion nichts mit return zurückgibt.
+
+❓7. Was ist eine rekursive Funktion?
+✅ Antwort:
+Eine rekursive Funktion ist eine Funktion, die sich selbst aufruft, um eine Aufgabe in kleineren Schritten zu lösen.
+
+❓8. Was macht raise?
+✅ Antwort:
+raise erzeugt absichtlich einen Fehler (Exception).
+Das ist nützlich, wenn man bestimmte Bedingungen selbst überprüfen und Fehler auslösen will.
+
+❓9. Was bedeutet with open(...) as ...?
+✅ Antwort:
+Das ist die empfohlene Schreibweise, um Dateien zu öffnen.
+Die Datei wird dabei automatisch korrekt geschlossen, auch wenn ein Fehler passiert.
+
+❓10. Was ist der Unterschied zwischen write() und read() bei Dateien?
+✅ Antwort:
+write() schreibt Text in eine Datei hinein.
+read() liest den Inhalt aus einer Datei heraus.
+
+❓11. Was ist random.seed()?
+✅ Antwort:
+seed() setzt den Startwert für den Zufallszahlengenerator.
+Dadurch liefert random immer die gleichen "Zufallszahlen" (z. B. zum Testen).
+
+❓12. Was sind Escape-Sequenzen wie \n oder \t?
+✅ Antwort:
+Das sind Sonderzeichen im String, z. B.:
+\n → Neue Zeile
+\t → Tabulator (Einrückung)
+
+❓13. Was ist der Unterschied zwischen ASCII und Unicode?
+✅ Antwort:
+ASCII: Enthält nur englische Zeichen (128 Zeichen).
+Unicode (UTF-8): Kann alle Zeichen weltweit darstellen (z. B. auch Ä, €, 字).
+
+❓14. Wozu dient chr(65)?
+✅ Antwort:
+chr(65) gibt das Zeichen zum Code 65 zurück → das ist "A".
+
+❓15. Warum sollte man bei Dateien with verwenden?
+✅ Antwort:
+Weil Python dann automatisch die Datei nach dem Lesen/Schreiben schließt – auch bei Fehlern.
+→ Das ist sicherer als open() ohne with.
+
+❓16. Was ist ein ValueError?
+✅ Antwort:
+Ein Fehler, der entsteht, wenn man z. B. versucht, einen Text in eine Zahl umzuwandeln, der keine Zahl ist.
+
+❓17. Was macht random.sample([1,2,3,4], 2)?
+✅ Antwort:
+Gibt 2 zufällige, verschiedene Elemente aus der Liste zurück (z. B. [3, 1])
+
+❓18. Warum sollte man Funktionen verwenden?
+✅ Antwort:
+Um wiederverwendbare, übersichtliche Bausteine im Code zu schaffen
+→ das macht den Code lesbarer und wartbarer.
+

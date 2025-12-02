@@ -1,0 +1,129 @@
+🧠 Prüfungsvorbereitung PCEP – Quizfragen (Tag 5)
+Themen: Operatoren, Schleifen, Listen, Ausnahmen (Exceptions)
+Format: Multiple Choice (1–2 richtige Antworten möglich)
+
+Frage 1:
+Was ist das Ergebnis des Ausdrucks 10 // 3?
+
+A) 3.33
+B) 3
+C) 4
+D) 3.0
+
+✅ Richtige Antwort: B
+Erklärung: // ist Ganzzahldivision → 3
+
+Frage 2:
+Welche Aussage ist richtig zu logischen Operatoren in Python?
+
+A) True and False ergibt True
+B) not False ergibt True
+C) True or False ergibt False
+D) not True ergibt True
+
+✅ Richtige Antwort: B
+Erklärung: not False ist True; True or False ist ebenfalls True
+
+Frage 3:
+Welche Schleife wird mindestens einmal ausgeführt, auch wenn die Bedingung nicht erfüllt ist?
+
+A) while
+B) for
+C) Beide
+D) Keine
+
+✅ Richtige Antwort: D
+Erklärung: In Python gibt es keine do-while-Schleife, daher kann eine Schleife gar nicht starten, wenn die Bedingung nicht erfüllt ist.
+
+Frage 4:
+Was macht das folgende Code-Snippet?
+
+for i in range(3):
+    if i == 1:
+        continue
+    print(i)
+
+A) Gibt 0, 1, 2 aus
+B) Gibt 0, 2 aus
+C) Gibt nur 1 aus
+D) Gibt 1, 2 aus
+
+✅ Richtige Antwort: B
+Erklärung: continue überspringt den Wert 1
+
+Frage 5:
+Welche Methoden verändern Listen in Python?
+
+A) append()
+B) remove()
+C) pop()
+D) len()
+
+✅ Richtige Antworten: A, B, C
+Erklärung: len() liest nur, verändert aber nicht.
+
+Frage 6:
+Welche Ausgabe erzeugt dieser Code?
+
+liste = [2, 4, 6]
+liste[1] = 8
+print(liste)
+
+A) [2, 4, 6]
+B) [2, 8, 6]
+C) [8, 4, 6]
+D) [2, 6, 8]
+
+✅ Richtige Antwort: B
+Erklärung: Index 1 wird mit 8 ersetzt.
+
+Frage 7:
+Welche Exception wird bei Division durch 0 geworfen?
+
+A) ValueError
+B) TypeError
+C) ZeroDivisionError
+D) NameError
+
+✅ Richtige Antwort: C
+
+Frage 8:
+Was passiert bei diesem Code?
+
+try:
+    print(5 / 0)
+except ZeroDivisionError:
+    print("Fehler erkannt")
+
+A) Das Programm stürzt ab
+B) Es wird „Fehler erkannt“ ausgegeben
+C) Es passiert nichts
+D) Eine falsche Exception wird ausgelöst
+
+✅ Richtige Antwort: B
+
+Frage 9:
+Was ist das Ergebnis?
+
+x = [1, 2, 3]
+print(len(x))
+
+A) 2
+B) 3
+C) 4
+D) Fehler
+
+✅ Richtige Antwort: B
+Erklärung: Die Liste hat 3 Elemente.
+
+Frage 10:
+Welche Aussage ist korrekt?
+
+A) range(3) gibt eine Liste zurück
+B) break beendet die aktuelle Schleife
+C) continue springt zum nächsten Funktionsaufruf
+D) try-Blöcke sind optional
+
+✅ Richtige Antwort: B
+Hinweis: range() erzeugt ein range-Objekt, keine Liste
+

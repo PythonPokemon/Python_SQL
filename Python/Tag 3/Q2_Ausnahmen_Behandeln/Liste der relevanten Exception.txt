@@ -1,0 +1,11 @@
+Liste der relevanten Exception-Typen für PCEP
+---------------------------------------------
+ValueError – Falscher Datentyp (z. B. int("abc"))
+TypeError – Falsche Operation für einen Datentyp (z. B. 5 + "abc")
+ZeroDivisionError – Division durch Null
+IndexError – Listen-/Tupel-Index nicht vorhanden
+KeyError – Falscher Schlüssel in einem Dictionary
+NameError – Variable oder Funktion nicht definiert
+AttributeError – Objekt hat das Attribut nicht
+ImportError – Modul oder Funktion nicht gefunden
+SyntaxError – Falscher Code-Aufbau (kann man nicht mit try-except fangen, nur vermeiden)

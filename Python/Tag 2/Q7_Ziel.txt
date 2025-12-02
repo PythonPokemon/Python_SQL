@@ -1,0 +1,13 @@
+Tag 2: 
+•	Schleifen, Sequenzen, Schleifen mit else, Verschachtelung von Schleifen, break, continue
+•	Listen, Tupel
+•	Komplexe Listen mit List Comprehensions erstellen, Dictionaries, Strings
+•	Eingebaute String-Methoden verwenden: 
+Methoden: .isxxx(), .join(), .split(), .sort(), sorted(), .index(), .find(), .rfind()
+•	Operieren mit Zeichenketten: 
+Funktionen: ord(), chr() 
+Indizierung, Slicing, Immutability 
+Iteration durch Strings, Verkettung, Multiplikation, Vergleich (mit Zeichenketten und Zahlen) 
+Operatoren: in, not in
+
+•	Prüfungsvorbereitung PCEP

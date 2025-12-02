@@ -1,0 +1,55 @@
+🎯 Prüfungsvorbereitung PCEP – Quizfragen (Tag 4)
+Themen: Module, Pakete, Benutzerdefinierte Module
+
+1. Was ist ein Modul in Python?
+Ein Modul ist eine Datei, die Python-Code (z. B. Funktionen, Klassen, Variablen) enthält und in anderen Dateien wiederverwendet werden kann.
+🟢 Beispiel: math, random, oder eigene Datei wie meinmodul.py.
+
+2. Wie importiert man ein Modul vollständig?
+import math
+print(math.sqrt(16))  # Ausgabe: 4.0
+
+3. Wie importiert man nur bestimmte Funktionen aus einem Modul?
+from math import sqrt
+print(sqrt(25))  # Ausgabe: 5.0
+
+4. Wie benennt man ein Modul beim Importieren um? (Alias)
+import math as m
+print(m.pi)  # Ausgabe: 3.141592...
+
+5. Was passiert bei from modul import *?
+Alle öffentlichen Inhalte (Variablen, Funktionen) des Moduls werden importiert, ohne dass der Modulname benutzt werden muss.
+❗ Das kann unübersichtlich werden und Namenskonflikte verursachen.
+
+6. Was ist der Unterschied zwischen einem Modul und einem Paket?
+Modul = einzelne .py-Datei
+Paket = Ordner mit mehreren Modulen + __init__.py (kann leer sein)
+
+7. Wie importiert man ein eigenes Modul?
+Die Datei konstanten.py liegt im selben Verzeichnis:
+import konstanten
+print(konstanten.NAME)
+
+8. Wie importiert man ein Modul aus einem Unterordner?
+Wenn der Ordner z. B. hilfsmodule heißt:
+from hilfsmodule import meinmodul
+
+9. Wie stellt man sicher, dass ein Verzeichnis als Paket erkannt wird?
+Man erstellt im Verzeichnis eine leere Datei namens __init__.py.
+
+10. Wozu dient __pycache__?
+Dort speichert Python kompilierte .pyc-Dateien zur schnelleren Ausführung.
+
+11. Warum kann ModuleNotFoundError auftreten, obwohl die Datei existiert?
+Modul liegt nicht im gleichen Verzeichnis
+Python findet das Paket nicht im sys.path
+Pfad wurde nicht korrekt angegeben
+
+12. Wie schreibt man eine eigene Konstante im Modul?
+
+# In konstanten.py
+PI = 3.14159
+
+# In main.py
+import konstanten
+print(konstanten.PI)
