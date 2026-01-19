@@ -203,3 +203,19 @@ join Position                                       -- Ankleben der zweiten Join
 On Bestellung.Bestellnummer = Position.Bestellnummer
 join Artikel                                        -- Ankleben der dritten Join Abfrage: Tabelle Artikel
 On Artikel.Artikelnummer = Position.Artikelnummer;
+
+--------------------------------------------------------------------------------------------------------------
+-- Indexierung von Tabellen zur Performancesteigerung bei großen Datenmengen
+-- Beispiel: Index auf Kundennummer in der Tabelle Bestellung
+CREATE INDEX nach ON Kunde (Nachname);
+
+SELECT *
+FROM Kunde
+WHERE Nachname = 'Meier';
+
+-- 1️⃣ Wie löscht man einen Index?
+-- Ganz einfach mit DROP INDEX:
+DROP INDEX nach;
+
+
+-- Ende der Übung --
