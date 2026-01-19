@@ -5,8 +5,8 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 0,
-    "scrollLeft": -800,
-    "zoomLevel": 1,
+    "scrollLeft": -232.9475,
+    "zoomLevel": 0.82,
     "show": 431,
     "database": 4,
     "databaseName": "",
@@ -44,7 +44,9 @@
       "dZqSbLfX5oiRFY-5kRTtg"
     ],
     "indexIds": [],
-    "memoIds": []
+    "memoIds": [
+      "La543liNdqHT4cFygefBv"
+    ]
   },
   "collections": {
     "tableEntities": {
@@ -70,14 +72,14 @@
         ],
         "ui": {
           "x": 21.3513,
-          "y": 99.0069,
+          "y": 92.1576,
           "zIndex": 2,
           "widthName": 60,
           "widthComment": 60,
           "color": "#E91E63"
         },
         "meta": {
-          "updateAt": 1761304018626,
+          "updateAt": 1768297934967,
           "createAt": 1761295834070
         }
       },
@@ -607,7 +609,7 @@
             "rhoQ6Dhj_kbNaqFxiD8WK"
           ],
           "x": 217.3513,
-          "y": 299.0069,
+          "y": 292.1576,
           "direction": 8
         },
         "end": {
@@ -711,6 +713,23 @@
     },
     "indexEntities": {},
     "indexColumnEntities": {},
-    "memoEntities": {}
+    "memoEntities": {
+      "La543liNdqHT4cFygefBv": {
+        "id": "La543liNdqHT4cFygefBv",
+        "value": "Relationeles Schema",
+        "ui": {
+          "x": 24.39024390243901,
+          "y": -97.0408536585366,
+          "zIndex": 190,
+          "width": 116,
+          "height": 100,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1768301314907,
+          "createAt": 1768301288217
+        }
+      }
+    }
   }
 }
