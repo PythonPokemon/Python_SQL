@@ -83,7 +83,7 @@ FOREIGN KEY (Artikelnummer) REFERENCES Artikel (Artikelnummer)                  
 
 -- Schritt 3 – Basistabellen Daten einfügen:
 
--- Tabelle ---------------------------------------------------------------------Kunde!
+-- Tabelle ---------------------------------------------------------------------Kunde!.
 --                          ACHTUNG PRIMARY KEY AUTOINCREMENT                       --
 
 INSERT INTO Kunde (Nachname, Vorname, Straße, PLZ, Ort)
@@ -164,3 +164,42 @@ VALUES (99, 5, 1);
 -- Schritt 5 – Abfragen und Überprüfen
 -- Alle Kunden:
  SELECT * FROM Kunde;
+
+
+-- Roter Faden: Join Abfragen
+
+-- Select
+-- Tabelle.Tabellenspalte, weitereTabelle.weiterSpalte
+-- From Tabelle_1_zu_n
+-- Join Tabelle_n
+-- On 
+-- Tabelle_1.PK =
+-- Tabelle_n.FK
+
+-- 1 zu n Beziehung (Kunde zu Bestellung)
+-- 1️⃣ Einfachster JOIN: Kunde ↔ Bestellung
+-- Frage: Welcher Kunde hat welche Bestellung?
+select Kunde.Nachname, Bestellung.Bestellnummer 
+from Kunde
+join Bestellung
+on Kunde.Kundennummer = Bestellung.Kundennummer;
+
+-- n zu m Beziehung über Kreuztabelle
+-- 2️⃣ JOIN über Kreuztabelle: Bestellung ↔ Position
+-- Frage: Welche Artikel sind in welcher Bestellung?
+select Position.Bestellnummer, Position.Artikelnummer, Position.Menge
+from Bestellung -- Bestellung steht zu position 1:n
+join Position   -- Position steht zu Artikel  n:1
+on Bestellung.Bestellnummer = Position.Bestellnummer;
+
+-- n zu m Beziehung über mehrere JOINs
+-- 3️⃣ Mehrere JOINs hintereinander (klassisch!)
+-- Frage: Welcher Kunde hat welchen Artikel bestellt?
+select Kunde.Nachname, Artikel.Bezeichnung, Artikel.Preis
+from Kunde
+join Bestellung                                     -- Ankleben der ersten Join Abfrage: Tabelle Bestellung
+On Kunde.Kundennummer = Bestellung.Kundennummer     -- man sagt das der PK von Kunde in Bestellung als FK hinterlegt ist.
+join Position                                       -- Ankleben der zweiten Join Abfrage: Tabelle Position
+On Bestellung.Bestellnummer = Position.Bestellnummer
+join Artikel                                        -- Ankleben der dritten Join Abfrage: Tabelle Artikel
+On Artikel.Artikelnummer = Position.Artikelnummer;
