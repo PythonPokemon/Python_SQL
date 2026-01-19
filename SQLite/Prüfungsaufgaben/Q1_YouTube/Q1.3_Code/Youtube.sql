@@ -163,4 +163,4 @@ VALUES (99, 5, 1);
 
 -- Schritt 5 – Abfragen und Überprüfen
 -- Alle Kunden:
-    -- SELECT * FROM Kunden;
+ SELECT * FROM Kunde;
