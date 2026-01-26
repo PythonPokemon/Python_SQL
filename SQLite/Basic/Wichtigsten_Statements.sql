@@ -194,7 +194,7 @@ SELECT DISTINCT nachname FROM personen;
 -- 1️⃣5️⃣TABELLEN VERBINDEN (JOIN)
 -- Holt Daten aus mehreren Tabellen gleichzeitig.
 --------------------------------------------------------------------------------------------------------------
--- Beispiel: Tabellen 'personen' und 'adressen'
+-- Beispiel: Tabellen 'personen' und 'adressen'.
 CREATE TABLE adressen (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     person_id INTEGER,
