@@ -3,6 +3,8 @@
 --------------------------------------------------------------------------------------------------------------
 -- strg + k + c  auskommentieren
 -- strg + k + u  einkommentieren
+-- strg + #      kommentieren / einkommentieren
+--------------------------------------------------------------------------------------------------------------
 
 -- DCL: Data Control Language: GRANT; REVOKE; Views | Benutzerrechte & Zugriffskontrolle ⚠️ Nein in SQL-LIte
 -- spalten/attribut löschen geht nicht!

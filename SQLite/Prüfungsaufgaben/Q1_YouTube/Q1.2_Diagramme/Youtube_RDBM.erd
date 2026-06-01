@@ -52,8 +52,8 @@
     "tableEntities": {
       "c_Vc6o8GTsdSEFKR2gFoq": {
         "id": "c_Vc6o8GTsdSEFKR2gFoq",
-        "name": "Kunde",
-        "comment": "",
+        "name": "Kunde ",
+        "comment": "1:n",
         "columnIds": [
           "rhoQ6Dhj_kbNaqFxiD8WK",
           "GWjnOCwhpMUy7HAFCAogA",
@@ -79,7 +79,7 @@
           "color": "#E91E63"
         },
         "meta": {
-          "updateAt": 1768297934967,
+          "updateAt": 1773909919020,
           "createAt": 1761295834070
         }
       },
