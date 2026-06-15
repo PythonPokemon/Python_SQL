@@ -5,6 +5,6 @@
 zahlenListe = [1, 2, 3, 4, 5]   # Zahlen in einer Liste
 
 for einzelneZahl in zahlenListe:
-    if einzelneZahl == 3:
+    if einzelneZahl == 5:
         break
     print(einzelneZahl)

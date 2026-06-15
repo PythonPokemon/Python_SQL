@@ -1,6 +1,6 @@
 # logische_operatoren_aufgaben.py
 """
-Thema: Logische Operatoren (and, or, not)
+Thema: Logische Operatoren (and, or, not, XOR)
 Ziel: Verständnis, wie Wahrheitswerte kombiniert und geprüft werden.
 Operatoren: and (UND), or (ODER), not (NICHT)
 

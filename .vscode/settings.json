@@ -1,0 +1,13 @@
+{
+    "editor.autoClosingBrackets": "always",
+
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.acceptSuggestionOnEnter": "on"
+}

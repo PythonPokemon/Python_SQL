@@ -9,5 +9,6 @@
 # 🧠 Aufgabe 1: Liste mit Obst
 # Gib das zweite Obst aus der Liste aus.
 
+#Index:         0         1         2
 obstListe = ["Apfel", "Banane", "Kirsche"]
 print(obstListe[1])  # Ausgabe: Banane

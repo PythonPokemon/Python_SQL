@@ -66,7 +66,7 @@ SELECT vorname, nachname FROM personen;
 -- 4️⃣.1  ALIAS VERWENDEN (AS)
 -- Verleiht Spalten oder Tabellen temporäre Namen.
 --------------------------------------------------------------------------------------------------------------
-SELECT vorname AS "Vorname", nachname AS "Nachname"
+SELECT vorname AS "Name", nachname AS "Familienname"
 FROM personen;
 
 

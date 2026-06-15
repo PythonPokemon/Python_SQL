@@ -13,6 +13,7 @@ menge = {1, 2, 3}               # set – Menge ohne Duplikate
 dictionary = {"a": 1, "b": 2}   # dict – Schlüssel/Wert-Paare
 nichts = None                   # NoneType – "kein Wert"
 
+
 # --- Objekttypen anzeigen ---
 print(type(ganzzahl))           # <class 'int'>
 print(type(kommazahl))          # <class 'float'>

@@ -9,6 +9,6 @@ if punktzahl >= 50:
     print("Bestanden ✅")
 
     if punktzahl >= 90:
-        print("Mit Auszeichnung bestanden! 🏅")  # wird nur geprüft, wenn >= 50
+        print("sogar mit Auszeichnung! 🏅")  # wird nur geprüft, wenn >= 50
 else:
     print("Nicht bestanden ❌")
